@@ -4,118 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Doe - Curriculum Vitae</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>John Doe</h1>
-        <p>Experienced Software Developer passionate about creating robust and scalable web applications.</p>
-        <address>
-            <p>Email: <a href="mailto:john.doe@email.com">john.doe@email.com</a></p>
-            <p>Phone: +1 (555) 123-4567</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></p>
-            <p>GitHub: <a href="https://github.com/johndoe" target="_blank">github.com/johndoe</a></p>
-            <p>Portfolio: <a href="https://www.johndoevacations.com" target="_blank">johndoevacations.com</a></p>
-        </address>
-    </header>
+<body class="bg-gray-100 text-gray-800 antialiased leading-relaxed p-4 sm:p-6 lg:p-8">
+    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-xl overflow-hidden">
 
-    <main>
-        <section id="summary">
-            ---
-            <h2>Summary</h2>
-            <p>Highly motivated and results-oriented Software Developer with 7 years of experience in full-stack web development. Proficient in JavaScript, Python, React, Node.js, and various cloud platforms. Proven ability to lead projects, mentor junior developers, and deliver high-quality software solutions on time and within budget.</p>
-        </section>
+        <!-- Header Section -->
+        <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 sm:p-10 text-center rounded-t-xl">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-2 tracking-tight">John Doe</h1>
+            <p class="text-lg sm:text-xl font-light opacity-90">Experienced Software Developer passionate about creating robust and scalable web applications.</p>
+            <address class="not-italic mt-6 text-sm sm:text-base opacity-90">
+                <p class="mb-1">Email: <a href="mailto:john.doe@email.com" class="hover:underline">john.doe@email.com</a></p>
+                <p class="mb-1">Phone: +1 (555) 123-4567</p>
+                <p class="mb-1">LinkedIn: <a href="https://www.linkedin.com/in/johndoe" target="_blank" class="hover:underline">linkedin.com/in/johndoe</a></p>
+                <p class="mb-1">GitHub: <a href="https://github.com/johndoe" target="_blank" class="hover:underline">github.com/johndoe</a></p>
+                <p>Portfolio: <a href="https://www.johndoevacations.com" target="_blank" class="hover:underline">johndoevacations.com</a></p>
+            </address>
+        </header>
 
-        <section id="experience">
-            ---
-            <h2>Experience</h2>
+        <main class="p-6 sm:p-8 lg:p-10">
+            <!-- Summary Section -->
+            <section id="summary" class="mb-8 pb-6 border-b border-gray-200">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-blue-700 mb-4 pb-2 border-b-2 border-blue-200">Summary</h2>
+                <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
+                    Highly motivated and results-oriented Software Developer with 7 years of experience in full-stack web development. Proficient in JavaScript, Python, React, Node.js, and various cloud platforms. Proven ability to lead projects, mentor junior developers, and deliver high-quality software solutions on time and within budget.
+                </p>
+            </section>
 
-            <article>
-                <h3>Senior Software Engineer</h3>
-                <p class="company">Tech Solutions Inc. | New York, NY</p>
-                <p class="dates">January 2021 – Present</p>
-                <ul>
-                    <li>Led the development of a new customer relationship management (CRM) system, improving data processing efficiency by 30%.</li>
-                    <li>Mentored a team of 4 junior developers, fostering their growth and improving team productivity.</li>
-                    <li>Designed and implemented RESTful APIs using Node.js and Express, serving millions of requests daily.</li>
-                    <li>Collaborated with product managers and UX designers to translate business requirements into technical specifications.</li>
+            <!-- Experience Section -->
+            <section id="experience" class="mb-8 pb-6 border-b border-gray-200">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-blue-700 mb-4 pb-2 border-b-2 border-blue-200">Experience</h2>
+
+                <article class="mb-6 last:mb-0 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-gray-900">Senior Software Engineer</h3>
+                    <p class="text-blue-600 font-medium text-sm sm:text-base">Tech Solutions Inc. | New York, NY</p>
+                    <p class="text-gray-500 text-xs sm:text-sm mb-3">January 2021 – Present</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm sm:text-base">
+                        <li>Led the development of a new customer relationship management (CRM) system, improving data processing efficiency by 30%.</li>
+                        <li>Mentored a team of 4 junior developers, fostering their growth and improving team productivity.</li>
+                        <li>Designed and implemented RESTful APIs using Node.js and Express, serving millions of requests daily.</li>
+                        <li>Collaborated with product managers and UX designers to translate business requirements into technical specifications.</li>
+                    </ul>
+                </article>
+
+                <article class="mb-6 last:mb-0 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-gray-900">Software Developer</h3>
+                    <p class="text-blue-600 font-medium text-sm sm:text-base">Web Innovations LLC | San Francisco, CA</p>
+                    <p class="text-gray-500 text-xs sm:text-sm mb-3">June 2018 – December 2020</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm sm:text-base">
+                        <li>Developed and maintained responsive web applications using React.js and Redux.</li>
+                        <li>Integrated third-party APIs for payment processing and analytics.</li>
+                        <li>Participated in code reviews and contributed to the continuous improvement of coding standards.</li>
+                        <li>Optimized database queries for a PostgreSQL database, reducing load times by 20%.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="mb-8 pb-6 border-b border-gray-200">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-blue-700 mb-4 pb-2 border-b-2 border-blue-200">Education</h2>
+                <article class="mb-6 last:mb-0 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-gray-900">Master of Science in Computer Science</h3>
+                    <p class="text-blue-600 font-medium text-sm sm:text-base">University of Technology | Boston, MA</p>
+                    <p class="text-gray-500 text-xs sm:text-sm mb-2">September 2016 – May 2018</p>
+                    <p class="text-gray-700 text-sm sm:text-base"><strong>Thesis:</strong> "Machine Learning Applications in Predictive Analytics"</p>
+                </article>
+                <article class="mb-6 last:mb-0 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-gray-900">Bachelor of Science in Computer Engineering</h3>
+                    <p class="text-blue-600 font-medium text-sm sm:text-base">State University | Austin, TX</p>
+                    <p class="text-gray-500 text-xs sm:text-sm">September 2012 – May 2016</p>
+                </article>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="mb-8 pb-6 border-b border-gray-200">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-blue-700 mb-4 pb-2 border-b-2 border-blue-200">Skills</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-medium text-gray-900 mb-1">Programming Languages:</h3>
+                        <p class="text-gray-700 text-sm sm:text-base">JavaScript (ES6+), Python, HTML5, CSS3, SQL</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-medium text-gray-900 mb-1">Frameworks & Libraries:</h3>
+                        <p class="text-gray-700 text-sm sm:text-base">React.js, Node.js, Express.js, Redux, Django, Flask, jQuery, Bootstrap</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-medium text-gray-900 mb-1">Databases:</h3>
+                        <p class="text-gray-700 text-sm sm:text-base">PostgreSQL, MongoDB, MySQL, Redis</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-medium text-gray-900 mb-1">Cloud Platforms:</h3>
+                        <p class="text-gray-700 text-sm sm:text-base">AWS (EC2, S3, Lambda, RDS), Google Cloud Platform (GCP)</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-medium text-gray-900 mb-1">Tools & Methodologies:</h3>
+                        <p class="text-gray-700 text-sm sm:text-base">Git, Docker, Kubernetes, Jest, Enzyme, Agile, Scrum, CI/CD</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="mb-8 pb-6 border-b border-gray-200">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-blue-700 mb-4 pb-2 border-b-2 border-blue-200">Projects</h2>
+                <article class="mb-6 last:mb-0 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-gray-900">E-commerce Platform Redesign</h3>
+                    <p class="text-gray-700 text-sm sm:text-base mb-2">Led the frontend redesign of an existing e-commerce platform, resulting in a 15% increase in user engagement and 10% increase in conversion rates.</p>
+                    <p class="text-gray-600 text-xs sm:text-sm mb-2"><strong>Technologies:</strong> React, Redux, Sass, RESTful API</p>
+                    <p><a href="https://github.com/johndoe/ecommerce-redesign" target="_blank" class="text-blue-600 hover:underline text-sm sm:text-base">View on GitHub</a></p>
+                </article>
+                <article class="mb-6 last:mb-0 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-gray-900">Real-time Chat Application</h3>
+                    <p class="text-gray-700 text-sm sm:text-base mb-2">Developed a real-time chat application with user authentication and persistent messaging using WebSockets.</p>
+                    <p class="text-gray-600 text-xs sm:text-sm mb-2"><strong>Technologies:</strong> Node.js, Express, Socket.io, MongoDB</p>
+                    <p><a href="https://github.com/johndoe/chat-app" target="_blank" class="text-blue-600 hover:underline text-sm sm:text-base">View on GitHub</a></p>
+                </article>
+            </section>
+
+            <!-- Awards & Certifications Section -->
+            <section id="awards">
+                <h2 class="text-2xl sm:text-3xl font-semibold text-blue-700 mb-4 pb-2 border-b-2 border-blue-200">Awards & Certifications</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm sm:text-base">
+                    <li>AWS Certified Solutions Architect – Associate (2023)</li>
+                    <li>Dean's List, University of Technology (2017, 2018)</li>
                 </ul>
-            </article>
+            </section>
+        </main>
 
-            <article>
-                <h3>Software Developer</h3>
-                <p class="company">Web Innovations LLC | San Francisco, CA</p>
-                <p class="dates">June 2018 – December 2020</p>
-                <ul>
-                    <li>Developed and maintained responsive web applications using React.js and Redux.</li>
-                    <li>Integrated third-party APIs for payment processing and analytics.</li>
-                    <li>Participated in code reviews and contributed to the continuous improvement of coding standards.</li>
-                    <li>Optimized database queries for a PostgreSQL database, reducing load times by 20%.</li>
-                </ul>
-            </article>
-        </section>
-
-        <section id="education">
-            ---
-            <h2>Education</h2>
-            <article>
-                <h3>Master of Science in Computer Science</h3>
-                <p class="institution">University of Technology | Boston, MA</p>
-                <p class="dates">September 2016 – May 2018</p>
-                <p><strong>Thesis:</strong> "Machine Learning Applications in Predictive Analytics"</p>
-            </article>
-            <article>
-                <h3>Bachelor of Science in Computer Engineering</h3>
-                <p class="institution">State University | Austin, TX</p>
-                <p class="dates">September 2012 – May 2016</p>
-            </article>
-        </section>
-
-        <section id="skills">
-            ---
-            <h2>Skills</h2>
-            <h3>Programming Languages:</h3>
-            <p>JavaScript (ES6+), Python, HTML5, CSS3, SQL</p>
-            <h3>Frameworks & Libraries:</h3>
-            <p>React.js, Node.js, Express.js, Redux, Django, Flask, jQuery, Bootstrap</p>
-            <h3>Databases:</h3>
-            <p>PostgreSQL, MongoDB, MySQL, Redis</p>
-            <h3>Cloud Platforms:</h3>
-            <p>AWS (EC2, S3, Lambda, RDS), Google Cloud Platform (GCP)</p>
-            <h3>Tools & Methodologies:</h3>
-            <p>Git, Docker, Kubernetes, Jest, Enzyme, Agile, Scrum, CI/CD</p>
-        </section>
-
-        <section id="projects">
-            ---
-            <h2>Projects</h2>
-            <article>
-                <h3>E-commerce Platform Redesign</h3>
-                <p class="description">Led the frontend redesign of an existing e-commerce platform, resulting in a 15% increase in user engagement and 10% increase in conversion rates.</p>
-                <p class="technologies"><strong>Technologies:</strong> React, Redux, Sass, RESTful API</p>
-                <p><a href="https://github.com/johndoe/ecommerce-redesign" target="_blank">View on GitHub</a></p>
-            </article>
-            <article>
-                <h3>Real-time Chat Application</h3>
-                <p class="description">Developed a real-time chat application with user authentication and persistent messaging using WebSockets.</p>
-                <p class="technologies"><strong>Technologies:</strong> Node.js, Express, Socket.io, MongoDB</p>
-                <p><a href="https://github.com/johndoe/chat-app" target="_blank">View on GitHub</a></p>
-            </article>
-        </section>
-
-        <section id="awards">
-            ---
-            <h2>Awards & Certifications</h2>
-            <ul>
-                <li>AWS Certified Solutions Architect – Associate (2023)</li>
-                <li>Dean's List, University of Technology (2017, 2018)</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        ---
-        <p>&copy; 2025 John Doe. All rights reserved.</p>
-    </footer>
+        <!-- Footer Section -->
+        <footer class="bg-gray-800 text-white p-6 text-center text-sm rounded-b-xl">
+            <p>&copy; 2025 John Doe. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
